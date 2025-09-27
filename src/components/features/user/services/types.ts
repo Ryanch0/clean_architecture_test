@@ -27,3 +27,9 @@ export type User = {
   website: string
   company: Company
 }
+
+export type UserRegistrationBody = {
+  name: string
+  email: string
+  phone: string
+}

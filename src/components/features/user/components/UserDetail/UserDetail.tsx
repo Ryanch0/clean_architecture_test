@@ -1,10 +1,11 @@
 import UserDetailItem from '@/components/features/user/components/UserDetail/UserDetailItem/UserDetailItem.tsx'
 import useUserDetailUseCase from '@/components/features/user/hooks/usecases/useUserDetailUseCase.ts'
+import BackButton from '@/components/shared/BackButton/BackButton.tsx'
 
 import styles from './UserDetail.module.scss'
 
 const UserDetail = () => {
-  const { data, isLoading, isError, navigate } = useUserDetailUseCase()
+  const { data, isLoading, isError } = useUserDetailUseCase()
 
   if (isLoading) return <>Loading UI</>
 
@@ -14,9 +15,7 @@ const UserDetail = () => {
 
   return (
     <div className={styles.article}>
-      <span className={styles.back} onClick={() => navigate(-1)}>
-        &larr;
-      </span>
+      <BackButton />
       <h2>{data.name}'s detail</h2>
       <UserDetailItem
         name={data.name}
