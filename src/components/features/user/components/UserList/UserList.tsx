@@ -27,7 +27,7 @@ const UserList = () => {
           )
         })}
       </ul>
-      <CustomButton onClick={navigateToAddNewUser}>새 사용자 추가</CustomButton>
+      <CustomButton onClick={navigateToAddNewUser}>Add new user</CustomButton>
     </div>
   )
 }
