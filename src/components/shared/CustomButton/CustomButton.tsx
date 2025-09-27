@@ -4,12 +4,13 @@ import styles from './CustomButton.module.scss'
 
 type CustomButtonProps = {
   children: ReactNode
-  onClick: () => void
+  onClick?: () => void
+  type?: 'submit' | 'reset'
 }
 
-const CustomButton = ({ children, onClick }: CustomButtonProps) => {
+const CustomButton = ({ children, onClick, type }: CustomButtonProps) => {
   return (
-    <button className={styles.btn} onClick={onClick}>
+    <button className={styles.btn} onClick={onClick} type={type}>
       {children}
     </button>
   )
