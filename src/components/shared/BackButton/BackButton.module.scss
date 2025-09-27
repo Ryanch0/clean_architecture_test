@@ -1,0 +1,12 @@
+.back {
+  display: inline-block;
+  font-size: 40px;
+  color: #767678;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: black;
+    transform: translateX(-10px);
+  }
+}
