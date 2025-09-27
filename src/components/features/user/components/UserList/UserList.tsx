@@ -1,6 +1,8 @@
-import { Link } from 'react-router'
-
+import UserListItem from '@/components/features/user/components/UserList/UserListItem.tsx'
 import useUserListUseCase from '@/components/features/user/hooks/usecases/useUserListUseCase.ts'
+import CustomButton from '@/components/shared/CustomButton/CustomButton.tsx'
+
+import styles from './UserList.module.scss'
 
 const UserList = () => {
   const { userData, navigateToAddNewUser, isLoading, isError } =
@@ -11,20 +13,21 @@ const UserList = () => {
   if (isError) return <>Error UI</>
 
   return (
-    <div>
-      <h3>사용자 목록 페이지</h3>
+    <div className={styles.article}>
+      <h2>사용자 목록 페이지</h2>
       <ul>
         {userData?.map((user) => {
-          const { id, username, email } = user
-
           return (
-            <li key={id}>
-              <Link to={`${id}`}>{`${username}: ${email}`}</Link>
-            </li>
+            <UserListItem
+              key={user.id}
+              id={user.id}
+              username={user.username}
+              email={user.email}
+            />
           )
         })}
       </ul>
-      <button onClick={navigateToAddNewUser}>새 사용자 추가</button>
+      <CustomButton onClick={navigateToAddNewUser}>새 사용자 추가</CustomButton>
     </div>
   )
 }

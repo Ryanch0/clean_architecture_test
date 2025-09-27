@@ -1,0 +1,18 @@
+.article {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 10px 10px 10px 0;
+
+    a {
+      text-decoration: none;
+      color: #767678;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
