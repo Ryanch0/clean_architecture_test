@@ -1,4 +1,4 @@
-import UserListItem from '@/components/features/user/components/UserList/UserListItem.tsx'
+import UserListItem from '@/components/features/user/components/UserList/UserListItem/UserListItem.tsx'
 import useUserListUseCase from '@/components/features/user/hooks/usecases/useUserListUseCase.ts'
 import CustomButton from '@/components/shared/CustomButton/CustomButton.tsx'
 

@@ -1,0 +1,23 @@
+.article {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: 10px 10px 10px 0;
+    color: #767678;
+  }
+}
+
+.back {
+  display: inline-block;
+  font-size: 40px;
+  color: #767678;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: black;
+    transform: translateX(-10px);
+  }
+}
