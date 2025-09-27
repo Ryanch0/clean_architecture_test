@@ -1,5 +1,6 @@
-import { createBrowserRouter, Navigate, Outlet } from 'react-router'
+import { createBrowserRouter, Navigate } from 'react-router'
 
+import RootLayout from '@/components/layouts/RootLayout.tsx'
 import UserCreatePage from '@/components/routes/UserCreatePage/UserCreatePage.tsx'
 import UserDetailPage from '@/components/routes/UserDetailPage/UserDetailPage.tsx'
 import UserListPage from '@/components/routes/UserListPage/UserListPage.tsx'
@@ -7,11 +8,7 @@ import UserListPage from '@/components/routes/UserListPage/UserListPage.tsx'
 const router = createBrowserRouter([
   {
     path: '',
-    element: (
-      <>
-        <Outlet />
-      </>
-    ),
+    element: <RootLayout />,
     children: [
       { index: true, element: <Navigate to={'users'} /> },
       { path: 'users', element: <UserListPage /> },
